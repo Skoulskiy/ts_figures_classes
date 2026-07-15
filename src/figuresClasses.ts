@@ -16,7 +16,7 @@ export class Triangle implements Figure {
     public shape: 'triangle' = 'triangle',
   ) {
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
-      throw new Error('Error excepted!');
+      throw new Error('Triangle side lengths must be greater than 0! ');
     }
 
     const perimetr: number = this.a + this.b + this.c;
@@ -24,7 +24,7 @@ export class Triangle implements Figure {
     const othersSum: number = perimetr - longest;
 
     if (longest >= othersSum) {
-      throw new Error('Excpeted error!');
+      throw new Error('Provided side lengths cannot form a valid triangle (triangle inequality violated)');
     }
   }
 
@@ -46,7 +46,7 @@ export class Circle implements Figure {
     public shape: 'circle' = 'circle',
   ) {
     if (this.radius <= 0) {
-      throw new Error('Excepted error');
+      throw new Error('Radius must be greater than 0!');
     }
   }
 
@@ -63,7 +63,7 @@ export class Rectangle implements Figure {
     public shape: 'rectangle' = 'rectangle',
   ) {
     if (this.a <= 0 || this.b <= 0) {
-      throw new Error('Excepted error!');
+      throw new Error('Width and height must be greater than 0');
     }
   }
 
