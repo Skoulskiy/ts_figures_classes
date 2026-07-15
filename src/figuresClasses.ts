@@ -24,7 +24,7 @@ export class Triangle implements Figure {
     const othersSum: number = perimetr - longest;
 
     if (longest >= othersSum) {
-      throw new Error('Provided side lengths cannot form a valid triangle (triangle inequality violated)');
+      throw new Error('Side lengths cannot form a valid triangle');
     }
   }
 
